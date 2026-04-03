@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Baholar</title>
+</head>
+<body>
+
+<h1>Talabalar bahosi</h1>
+
+<ul>
+{% for s in students %}
+    <li>
+        {{ s.name }} - {{ s.score }} :
+        {% if s.score >= 90 %}
+            A
+        {% elif s.score >= 70 %}
+            B
+        {% elif s.score >= 50 %}
+            C
+        {% else %}
+            F
+        {% endif %}
+    </li>
+{% endfor %}
+</ul>
+
+</body>
+</html>
